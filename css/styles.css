@@ -1,0 +1,98 @@
+/*Переменные*/
+:root {
+	--color-light-blue:#1ae6ec;
+	--background-black-opacity:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);	
+}
+
+/*Общие стили*/
+a {
+	color: var(--color-light-blue);
+	text-decoration: none;
+	transition: opacity 0.25s ease;
+}
+a:hover {
+	opacity: 0.7;
+}
+
+/* Header */
+.header {
+    height: 100vh;
+	background: url(../images/header-bg.png) no-repeat center;
+	background-size: cover;
+	clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+	height: 80px;
+	background: var(--background-black-opacity);	
+
+	color: #fff;
+}
+
+.header-top a {
+	color: #fff;
+}
+
+.header-top a.active {
+	color:var(--color-light-blue);
+}
+
+.logo {
+	font-size: 36px;
+	margin-right: 40px;
+	
+}
+
+
+.menu {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	color: #fff;
+}
+
+.menu-element {
+	margin-right: 10px;
+
+	font-size: 20px;
+}
+
+.menu-element a:hover {
+	color: var(--color-light-blue);
+}
+
+.menu-element:last-child {
+	margin-right: 0;
+}
+
+.header-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 80px);
+	
+	color: #fff;
+}
+
+.header-center__wrapper {
+	width: 100%;
+	background: var(--background-black-opacity);
+	text-align: center;
+	padding: 20px 0;
+}
+
+.name {
+	font-size: 52px;
+	line-height: 50px;
+}
+
+.description {
+	font-size: 28px;
+	
+}
+/* Header */
