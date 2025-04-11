@@ -1,7 +1,7 @@
 /*Переменные*/
 :root {
-	--color-light-blue:#1ae6ec;
-	--background-black-opacity:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);	
+	--color-light-blue: #91e0f8;
+	--background-black-opacity:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%,  rgba(0, 0, 0, 0) 100%);	
 }
 
 /*Общие стили*/
@@ -16,13 +16,23 @@ a:hover {
 
 /* Header */
 .header {
+	position: relative;
     height: 100vh;
 	background: url(../images/header-bg.png) no-repeat center;
 	background-size: cover;
 	clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
 }
 
+.header-background{
+	position: absolute;
+	height: inherit;
+	width: 100%;
+	background:rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+
 .header-top {
+	position: relative;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -31,6 +41,7 @@ a:hover {
 	background: var(--background-black-opacity);	
 
 	color: #fff;
+	z-index: 2;
 }
 
 .header-top a {
@@ -56,9 +67,9 @@ a:hover {
 }
 
 .menu-element {
-	margin-right: 10px;
+	margin-right: 25px;
 
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .menu-element a:hover {
@@ -70,20 +81,21 @@ a:hover {
 }
 
 .header-center {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	height: calc(100vh - 80px);
-	
+	background: var(--background-black-opacity);
 	color: #fff;
+	z-index: 2;
 }
 
 .header-center__wrapper {
 	width: 100%;
-	background: var(--background-black-opacity);
 	text-align: center;
-	padding: 20px 0;
+	
 }
 
 .name {
